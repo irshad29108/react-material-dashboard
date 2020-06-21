@@ -26,7 +26,8 @@ import Notifications from "@material-ui/icons/Notifications";
 // import Language from "@material-ui/icons/Language";
 // core components/views for Admin layout
 import DashboardPage from "views/Dashboard/Dashboard.js";
-import UserProfile from "views/UserProfile/UserProfile.js";
+import Profile from 'views/Profile/Profile';
+import AdminLogs from 'views/AdminLogs/AdminLogs';
 import TableList from "views/TableList/TableList.js";
 import Typography from "views/Typography/Typography.js";
 import Icons from "views/Icons/Icons.js";
@@ -46,11 +47,11 @@ const dashboardRoutes = [
     layout: "/superadmin"
   },
   {
-    path: "/user",
-    name: "User Profile",
+    path: "/profile",
+    name: "Profile",
     // rtlName: "ملف تعريفي للمستخدم",
     icon: Person,
-    component: UserProfile,
+    component: Profile,
     layout: "/superadmin"
   },
   {
@@ -83,6 +84,14 @@ const dashboardRoutes = [
     // rtlName: "إخطارات",
     icon: Notifications,
     component: NotificationsPage,
+    layout: "/superadmin"
+  },
+  {
+    path: "/admin-logs",
+    name: "Admin Logs",
+    // rtlName: "إخطارات",
+    icon: "content_paste",
+    component: AdminLogs,
     layout: "/superadmin"
   },
 ];
